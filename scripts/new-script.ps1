@@ -51,8 +51,10 @@ Write-Host 'Clonando e renomeando o resource...'
 $target = Join-Path $Destination $Name
 Invoke-Gh repo clone $repo $target
 
-foreach ($file in 'fxmanifest.lua', 'README.md') {
+$renameFiles = 'fxmanifest.lua', 'README.md', 'web/index.html', 'web/package.json', 'web/package-lock.json', 'web/src/lib/nui.ts'
+foreach ($file in $renameFiles) {
     $path = Join-Path $target $file
+    if (-not (Test-Path $path)) { continue }
     $content = [IO.File]::ReadAllText($path, $utf8).Replace('az-script-template', $Name)
     if ($file -eq 'fxmanifest.lua' -and $Description) {
         $content = $content -replace "(?m)^description '.*'$", "description '$($Description.Replace("'", "\'"))'"
