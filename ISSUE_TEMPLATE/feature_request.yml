@@ -1,0 +1,15 @@
+name: Melhoria
+description: Sugerir uma nova funcionalidade ou ajuste
+labels: [melhoria]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: O que você gostaria?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Por quê?
+      description: Que problema isso resolve para a cidade ou para os jogadores?

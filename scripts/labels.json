@@ -1,0 +1,12 @@
+[
+  { "name": "bug",           "color": "d73a4a", "description": "Algo não funciona como deveria" },
+  { "name": "melhoria",      "color": "a2eeef", "description": "Nova funcionalidade ou ajuste" },
+  { "name": "fornecedor",    "color": "5319e7", "description": "Solicitado pelo fornecedor" },
+  { "name": "urgente",       "color": "b60205", "description": "Afeta a cidade em produção" },
+  { "name": "performance",   "color": "fbca04", "description": "Impacto em resmon / ms" },
+  { "name": "segurança",     "color": "000000", "description": "Exploit, validação server-side" },
+  { "name": "documentação",  "color": "0075ca", "description": "README, config, comentários" },
+  { "name": "dúvida",        "color": "d876e3", "description": "Pergunta ou esclarecimento" },
+  { "name": "duplicada",     "color": "cfd3d7", "description": "Já existe outra issue igual" },
+  { "name": "não será feito","color": "ffffff", "description": "Fora do escopo" }
+]

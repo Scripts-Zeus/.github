@@ -1,0 +1,40 @@
+name: Bug
+description: Algo não está funcionando como deveria
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Versão do script
+      description: Campo `version` do fxmanifest.lua
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema e o que era esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Entrar no servidor
+        2. Usar o comando ...
+        3. Ver o erro
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Erros do console do servidor e/ou do F8 do client.
+      render: shell
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact do servidor
+      placeholder: '12345'
